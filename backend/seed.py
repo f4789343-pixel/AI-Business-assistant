@@ -9,11 +9,9 @@ def seed_customers():
   db.commit()
  finally:
   db.close()
- 
-
 #customers = db.query(Customer).all()
 #for customer in customers:
- #print(customer.customer_id, customer.name, customer.email)
+#print(customer.customer_id, customer.name, customer.email)
 def seed_orders():
  try:
   db = SessionLocal()
