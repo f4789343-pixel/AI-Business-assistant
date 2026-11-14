@@ -1,0 +1,730 @@
+
+/* =========================================
+   COLC AI — PREMIUM SAAS DESIGN SYSTEM
+========================================= */
+
+:root {
+    --bg: #080D19;
+    --sidebar: #0B1120;
+    --surface: #111A2B;
+    --surface-hover: #17233A;
+    --border: #202D43;
+    --primary: #818CF8;
+    --primary-hover: #6366F1;
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+    --success: #34D399;
+}
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+[data-testid="stMain"] {
+    background: var(--bg);
+}
+
+.main .block-container {
+    max-width: 1500px;
+    padding: 2.5rem 3rem 4rem;
+}
+
+/* SIDEBAR */
+[data-testid="stSidebar"] {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] > div {
+    padding: 1.5rem 1rem;
+}
+
+[data-testid="stSidebar"] p {
+    color: var(--muted);
+}
+
+/* HEADINGS */
+h1 {
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+h2 {
+    color: var(--text);
+    font-size: 1.45rem;
+    font-weight: 650;
+    letter-spacing: -0.4px;
+}
+
+h3 {
+    color: #E2E8F0;
+    font-weight: 600;
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+/* BUTTONS */
+.stButton > button {
+    background: var(--primary-hover);
+    color: white;
+    border: 1px solid var(--primary-hover);
+    border-radius: 10px;
+    padding: 0.65rem 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: #4F46E5;
+    border-color: #818CF8;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+    color: white;
+}
+
+/* SIDEBAR NAVIGATION BUTTONS */
+[data-testid="stSidebar"] .stButton > button {
+    background: transparent;
+    color: #A8B4C7;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    text-align: left;
+    padding: 0.75rem 0.9rem;
+    box-shadow: none;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: var(--surface-hover);
+    color: var(--primary);
+    border-color: var(--border);
+}
+
+/* INPUTS */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.7rem;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+[data-baseweb="select"] > div {
+    background: var(--surface);
+    border-color: var(--border);
+    border-radius: 10px;
+}
+
+/* METRIC CARDS */
+[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #141F33, #101827);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 1.3rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    border-color: #4F5DB5;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text);
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COLC AI — CARD REFINEMENT
+========================================= */
+
+/* Remove generic container styling */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background: #111A2B;
+    border: 1px solid #25334B;
+    border-radius: 14px;
+    padding: 20px 22px;
+    min-height: 125px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    transition: border-color 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: #6366F1;
+    transform: translateY(-2px);
+}
+
+/* Metric labels */
+[data-testid="stMetricLabel"] {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Metric values */
+[data-testid="stMetricValue"] {
+    color: #F8FAFC;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+/* Custom dashboard panels */
+.dashboard-panel {
+    background: #111A2B;
+    border: 1px solid #25334B;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+/* Panel headings */
+.panel-title {
+    color: #F1F5F9;
+    font-size: 16px;
+    font-weight: 650;
+    margin-bottom: 15px;
+}
+
+/* Quick action cards */
+.quick-card {
+    background: #111A2B;
+    border: 1px solid #25334B;
+    border-radius: 14px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.quick-card:hover {
+    background: #17233A;
+    border-color: #6366F1;
+    transform: translateY(-3px);
+}
+
+/* COLC AI — QUICK ACTION BUTTONS */
+
+.st-key-quick_actions .stButton > button {
+    width: 100%;
+    height: 76px;
+    background: #111A2B !important;
+    color: #F8FAFC !important;
+    border: 1px solid #263650 !important;
+    border-radius: 13px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+}
+
+.st-key-quick_actions .stButton > button p {
+    color: #F8FAFC !important;
+}
+
+.st-key-quick_actions .stButton > button:hover {
+    background: #192641 !important;
+    border-color: #818CF8 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(99, 102, 241, 0.12) !important;
+}
+
+.st-key-quick_actions .stButton > button:active {
+    transform: scale(0.99);
+}
+
+/* =========================================
+   COLC AI — TYPOGRAPHY SYSTEM
+========================================= */
+
+/* Main page title */
+h1,
+[data-testid="stMarkdownContainer"] h1 {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #F8FAFC !important;
+    font-size: 32px !important;
+    font-weight: 750 !important;
+    letter-spacing: -1.2px;
+    line-height: 1.5;
+}
+
+/* Section headings */
+h2,
+[data-testid="stMarkdownContainer"] h2 {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #E2E8F0 !important;
+    font-size: 23px !important;
+    font-weight: 650 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Subsection headings */
+h3,
+[data-testid="stMarkdownContainer"] h3 {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #CBD5E1 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+/* COLC AI branding */
+.colc-heading {
+    color: #a0adf2;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.colc-subtitle {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Section titles */
+.colc-section {
+    color: #F1F5F9;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.10px;
+}
+
+.colc-section-subtitle {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Card titles */
+.colc-title {
+    color: #F8FAFC;
+    font-size: 16px;
+    font-weight: 650;
+}
+
+/* General text */
+[data-testid="stMarkdownContainer"] p {
+    color: #A8B4C7;
+    font-size: 14px;
+    line-height: 1.20;
+}
+
+/* Responsive headings */
+@media (max-width: 800px) {
+    h1,
+    [data-testid="stMarkdownContainer"] h1 {
+        font-size: 26px !important;
+    }
+
+    h2,
+    [data-testid="stMarkdownContainer"] h2 {
+        font-size: 20px !important;
+    }
+}
+
+/* =========================================
+   COLC AI — HEADER SPACING
+========================================= */
+
+/* Brand title */
+.colc-heading {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Brand subtitle */
+.colc-subtitle {
+    margin-top: 0;
+    margin-bottom: 42px;
+    line-height: 1.7;
+}
+
+/* Quick Actions heading */
+.colc-section {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Quick Actions description */
+.colc-section-subtitle {
+    margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   COLC AI — PREMIUM CHAT INPUT
+========================================= */
+
+/* Chat input container */
+[data-testid="stChatInput"] {
+    background: #111A2B !important;
+    border: 1px solid #293954 !important;
+    border-radius: 16px !important;
+    padding: 5px 10px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18) !important;
+    transition: all 0.2s ease;
+}
+
+/* Focus effect */
+[data-testid="stChatInput"]:focus-within {
+    border-color: #818CF8 !important;
+    box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.12) !important;
+}
+
+/* Text area */
+[data-testid="stChatInput"] textarea {
+    background: transparent !important;
+    color: #F1F5F9 !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding: 12px 10px !important;
+    caret-color: #A5B4FC;
+}
+
+/* Placeholder */
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #718096 !important;
+    opacity: 1;
+}
+
+/* Send button */
+[data-testid="stChatInput"] button {
+    background: #6366F1 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 5px !important;
+    width: 1px;
+    height: 5px;
+    transition: all 0.2s ease;
+}
+
+/* Send button hover */
+[data-testid="stChatInput"] button:hover {
+    background: #4F46E5 !important;
+    box-shadow: 0 3px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Chat input area spacing */
+[data-testid="stChatInputContainer"] {
+    padding-top: 12px;
+}
+
+/* Chat message spacing */
+[data-testid="stChatMessage"] {
+    border-radius: 14px;
+    padding: 12px 13px;
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    [data-testid="stChatInput"] {
+        border-radius: 13px !important;
+    }
+}
+
+/* =========================================
+   COLC AI — CHAT INPUT FINAL POLISH
+========================================= */
+
+/* Main chat input */
+[data-testid="stChatInput"] {
+    background: #111A2B !important;
+    border: 1px solid #051123 !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+    padding: 5px 8px !important;
+}
+
+
+/* COLC AI — CHAT INPUT */
+
+/* Bottom chat area */
+[data-testid="stBottomBlockContainer"] {
+    background: #080D19 !important;
+}
+
+/* Chat input outer container */
+[data-testid="stChatInput"] {
+    background: #111A2B !important;
+    border: 1px solid #061329 !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+}
+
+/* Inner input wrapper */
+[data-testid="stChatInput"] [data-baseweb="textarea"] {
+    background: #111A2B !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Text area */
+[data-testid="stChatInput"] textarea {
+    background: #111A2B !important;
+    color: #F8FAFC !important;
+    caret-color: #818CF8 !important;
+}
+
+/* Placeholder */
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #8a95a3 !important;
+    opacity: 1 !important;
+}
+
+/* Focus */
+[data-testid="stChatInput"]:focus-within {
+    border-color: #0e1d34 !important;
+    box-shadow: 0 0 0 1px #45618D !important;
+}
+
+/* Send button */
+[data-testid="stChatInput"] button {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 !important;
+    margin: 0 2px !important;
+    border: none !important;
+    border-radius: 11px !important;
+    background: #141429 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    align-self: center !important;
+}
+
+/* Arrow icon */
+[data-testid="stChatInput"] button svg {
+    width: 19px !important;
+    height: 19px !important;
+    stroke: #caa1a1 !important;
+    fill: not none!important;
+}
+
+/* Button hover */
+[data-testid="stChatInput"] button:hover {
+    background: #323257 !important;
+    border: none !important;
+}
+
+
+
+/* Arrow color and alignment */
+[data-testid="stChatInput"] button svg {
+    color: #A5B4FC !important;
+    stroke: #A5B4FC !important;
+    width: 21px !important;
+    height: 21px !important;
+}
+
+/* Hover */
+[data-testid="stChatInput"] button:hover {
+    background: #202B45 !important;
+}
+
+
+/* COLC AI — Proper Paper Plane Icon */
+
+[data-testid="stChatInput"] button svg {
+    display: none !important;
+}
+
+[data-testid="stChatInput"] button::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: #7185ea;
+
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+[data-testid="stChatInput"] button:hover::after {
+    background-color: #98d3c9;
+}
+
+
+
+/* =========================================
+   COLC AI — SEARCH BUTTON DESIGN
+========================================= */
+
+div[class*="st-key-customer_search"] button,
+div[class*="st-key-lead_search"] button,
+div[class*="st-key-order_search"] button {
+
+    width: 125px !important;
+    height: 44px !important;
+
+    background: linear-gradient(
+        135deg,
+        #293858,
+        #1A2943
+    ) !important;
+
+    color: #E0E7FF !important;
+    border: 1px solid #465B82 !important;
+    border-radius: 10px !important;
+
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+
+    transition: all 0.2s ease !important;
+}
+
+/* Button text */
+div[class*="st-key-customer_search"] button p,
+div[class*="st-key-lead_search"] button p,
+div[class*="st-key-order_search"] button p {
+    color: #E0E7FF !important;
+}
+
+/* Hover */
+div[class*="st-key-customer_search"] button:hover,
+div[class*="st-key-lead_search"] button:hover,
+div[class*="st-key-order_search"] button:hover {
+
+    background: #364A70 !important;
+    border-color: #818CF8 !important;
+    color: #FFFFFF !important;
+
+    box-shadow: 0 5px 16px rgba(99,102,241,0.2) !important;
+    transform: translateY(-2px);
+}
+
+
+/* Dark blue hover */
+div[data-testid="stTextInput"] div[data-baseweb="input"]:hover {
+    border-color: #45618D !important;
+}
+
+/* USER AND ASSISTANT CHAT MESSAGES */
+[data-testid="stChatMessage"] {
+    background: #111A2B !important;
+    border: 1px solid #202D43 !important;
+    border-radius: 14px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 14px !important;
+}
+
+/* USER MESSAGE */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+    background: #14213A !important;
+    border-color: #293F63 !important;
+}
+
+/* ASSISTANT MESSAGE */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+    background: #0D1729 !important;
+    border-color: #202D43 !important;
+}
+
+/* CLEAR CHAT BUTTON */
+div[class*="st-key-clear_chat"] button {
+    background: #1a2e52 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #1a2d4a !important;
+    border-radius: 10px !important;
+    transition: 0.2s ease;
+}
+
+div[class*="st-key-clear_chat"] button:hover {
+    background: #354F7A !important;
+    border-color: #2d4264 !important;
+    color: white !important;
+}
+
+/* COLC AI — CHAT INPUT COLORS */
+
+[data-testid="stChatInput"],
+[data-testid="stChatInput"] > div,
+[data-testid="stChatInput"] [data-baseweb="textarea"],
+[data-testid="stChatInput"] [data-baseweb="base-input"] {
+    background-color: #111A2B !important;
+    border-color: #202D43 !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    background-color: #111A2B !important;
+    color: #F8FAFC !important;
+    caret-color: #818CF8 !important;
+}
+
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #94A3B8 !important;
+    opacity: 1 !important;
+}
+
+/* Subtle chat bar hover */
+[data-testid="stChatInput"]:hover {
+    border-color: #293F63 !important;
+    transition: border-color 0.2s ease;
+}
+
+/* CREATE LEAD BUTTON */
+div[class*="st-key-create_lead"] button {
+    background-color: #263B60 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #3B5682 !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* SUBTLE HOVER */
+div[class*="st-key-create_lead"] button:hover {
+    background-color: #2D456B !important;
+    border-color: #45618D !important;
+    color: white !important;
+}
