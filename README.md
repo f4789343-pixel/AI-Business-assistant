@@ -21,12 +21,11 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
 ### Customer Search
 ![Customer Search](<Screenshot 2026-11-15 204439.png>)
 
-### Order Search
+### Lead management
 ![Order Search](<Screenshot 2026-11-15 204614.png>)
 
-
-### Lead search
-![Lead search](<Screenshot 2026-11-15 205043.png>)
+### 
+![chat](<Screenshot 2026-11-15 205043.png>)
   
 ## Features
 - **Customer Search:** Retrieve customer information using natural language.
