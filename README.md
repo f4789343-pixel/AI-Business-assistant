@@ -16,7 +16,7 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
   ## Screenshots
 
 ### Main Dashboard
-![COLC AI Dashboard](screenshots/dashboard.png)
+![COLC AI Dashboard](<Screenshot 2026-11-15 203442.png>)
 
 ### Customer Search
 ![Customer Search](screenshots/customer-search.png)
