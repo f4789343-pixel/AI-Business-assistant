@@ -80,7 +80,14 @@ with st.container(key="quick_actions"):
             "Add a new business lead", "create_lead"
         )
 
-
+def display_search_result(message,section):
+    with st.container(key="search_result"):
+        st.markdown(
+            '<div class="result-label">SEARCH RESULT</div>',
+            unsafe_allow_html=True
+        )
+        st.markdown("### AI Response")
+        st.write(message)
 API_URL = "http://127.0.0.1:8000/chat"
 # 8. Display selected section
 if st.session_state.active_section == "customer":
@@ -96,7 +103,7 @@ if st.session_state.active_section == "customer":
           response.raise_for_status()
           result = response.json()
 
-          st.write(result["message"])
+          display_search_result(result["message"], "customer")
 
         except requests.exceptions.RequestException as e:
           st.error(f"API connection failed: {e}")
@@ -111,7 +118,7 @@ elif st.session_state.active_section == "lead":
          try:
              response = requests.post(API_URL, json={"message": message})
              result = response.json()
-             st.write(result["message"])
+             display_search_result(result["message"], "lead")
          except requests.exceptions.RequestException as e:
           st.error(f"API connection failed: {e}")
 elif st.session_state.active_section == "order":
@@ -123,7 +130,7 @@ elif st.session_state.active_section == "order":
           try:
            response = requests.post(API_URL, json={"message":message})
            result = response.json()
-           st.write(result["message"])
+           display_search_result(result["message"], "order")
           except requests.exceptions.RequestException as e:
                     st.error(f"API connection failed: {e}")
 elif st.session_state.active_section == "create_lead":
@@ -136,7 +143,7 @@ elif st.session_state.active_section == "create_lead":
        try:
           response = requests.post(API_URL, json={"message":message})
           result = response.json()
-          st.write(result["message"])
+          display_search_result(result["message"], "Create Lead")
        except requests.exceptions.RequestException as e:
             st.error(f"API connection failed: {e}")      
 
@@ -148,13 +155,13 @@ if prompt := st.chat_input("Ask COLC AI anything..."):
     st.session_state.messages.append(
         {"role": "user", "content": prompt}
     )
-    with st.chat_message("user"):
+    with st.chat_message("user", avatar=":material/person:"):
         st.write(prompt)
     response = requests.post(API_URL, json={"message": prompt})
     result = response.json()
     answer = result["message"]
     st.session_state.messages.append({"role":"assistant", "content": answer})
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant",avatar=":material/smart_toy:"):
      st.write(answer)
 if st.session_state.messages != []:
  if st.button("Clear chat", key="clear_chat"):
