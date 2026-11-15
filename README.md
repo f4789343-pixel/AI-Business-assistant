@@ -4,10 +4,13 @@ COLC AI is an AI-powered business operations assistant that allows users to inte
 
 It uses an AI agent with tool-calling capabilities to retrieve customer, order, and lead information from a PostgreSQL database and create new leads.
 
-## URLS
+## Live demo
 - streamlit: https://ai-business-assistant-3cjgmzzerxjte3etglvpea.streamlit.app
 - vercel: https://ai-business-assistant-c-baf1.vercel.app
 - vercel(swagger): https://ai-business-assistant-c-baf1.vercel.app/docs
+
+* Execution time depends on the content.
+* Model can give temporary request limit errors. 
   
 ## Features
 - **Customer Search:** Retrieve customer information using natural language.
