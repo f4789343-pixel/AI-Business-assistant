@@ -143,7 +143,7 @@ elif st.session_state.active_section == "create_lead":
        try:
           response = requests.post(API_URL, json={"message":message})
           result = response.json()
-          display_search_result(result["message"], "Create Lead")
+          st.write(result["message"])
        except requests.exceptions.RequestException as e:
             st.error(f"API connection failed: {e}")      
 
