@@ -1,5 +1,3 @@
-[tool.vercel]
-entrypoint = "backend.api:app"
 
 [project]
 name = "colc-ai"
