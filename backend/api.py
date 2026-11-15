@@ -15,7 +15,10 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat")
 def chat(data: ChatRequest):
+   start = time.perf_counter()
    response = run_agent(data.message)
+   end = time.perf_counter()
+   print(f"execution time:{end - start:.2f}")
    return {"message": response}
 
 
