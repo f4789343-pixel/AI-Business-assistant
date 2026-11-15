@@ -6,8 +6,8 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
 
 ## URLS
 - streamlit: https://ai-business-assistant-3cjgmzzerxjte3etglvpea.streamlit.app
-- vercel: ai-business-assistant-c-baf1.vercel.app
-- vercel(swagger): ai-business-assistant-c-baf1.vercel.app/docs
+- vercel: https://ai-business-assistant-c-baf1.vercel.app
+- vercel(swagger): https://ai-business-assistant-c-baf1.vercel.app/docs
   
 ## Features
 - **Customer Search:** Retrieve customer information using natural language.
