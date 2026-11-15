@@ -1,2 +1,19 @@
 [tool.vercel]
 entrypoint = "backend.api:app"
+
+[project]
+name = "colc-ai"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.162.5",
+    "uvicorn==0.54.0",
+    "SQLAlchemy==2.1.8",
+    "psycopg[binary]",
+    "python-dotenv==1.2.4",
+    "pydantic==2.14.3",
+    "openai==3.49.0"
+]
+
+[tool.vercel]
+entrypoint = "backend.api:app"
