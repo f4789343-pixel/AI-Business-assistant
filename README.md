@@ -24,7 +24,7 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
 ### Lead management
 ![Order Search](<Screenshot 2026-11-15 204614.png>)
 
-### 
+### Chat interface
 ![chat](<Screenshot 2026-11-15 205043.png>)
   
 ## Features
