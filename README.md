@@ -11,7 +11,21 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
 
 * Response time depends on the content and model availability.
 * Model can give temporary request limit errors.
-* Initial requests can be slow due to free hosting. 
+* Initial requests can be slow due to free hosting.
+
+  ## Screenshots
+
+### Main Dashboard
+![COLC AI Dashboard](screenshots/dashboard.png)
+
+### Customer Search
+![Customer Search](screenshots/customer-search.png)
+
+### Order Search
+![Order Search](screenshots/order-search.png)
+
+### Lead Creation
+![Lead Creation](screenshots/lead-creation.png)
   
 ## Features
 - **Customer Search:** Retrieve customer information using natural language.
