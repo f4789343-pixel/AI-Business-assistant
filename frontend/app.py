@@ -88,7 +88,7 @@ def display_search_result(message,section):
         )
         st.markdown("### AI Response")
         st.write(message)
-API_URL = "http://127.0.0.1:8000/chat"
+API_URL = "https://colc-ai.vercel.app/chat"
 # 8. Display selected section
 if st.session_state.active_section == "customer":
     st.subheader("Customer Lookup")
