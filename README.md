@@ -19,13 +19,13 @@ It uses an AI agent with tool-calling capabilities to retrieve customer, order, 
 ![COLC AI Dashboard](<Screenshot 2026-11-15 203442.png>)
 
 ### Customer Search
-![Customer Search](Screenshot 2026-11-15 204439.png)
+![Customer Search](<Screenshot 2026-11-15 204439.png>)
 
 ### Order Search
-![Order Search]([Screenshot 2026-11-15 204614.png])
+![Order Search](<Screenshot 2026-11-15 204614.png>)
 
 ### Lead Creation
-![Lead Creation](Screenshot 2026-11-15 204705.png)
+![Lead Creation](<Screenshot 2026-11-15 204705.png>)
 
 ### Lead search
 ![Lead search](Screenshot 2026-11-15 205043.png)
